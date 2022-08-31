@@ -10,24 +10,61 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-}
+  var array=[]
 
+
+for (const property in objeto) {
+  array.push([property, objeto[property]])
+}
+return array
+}
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var diferentes = string.charAt(0)
+for (i=0;i<string.length;i++){
+  b=0;
+  for (j=0;j<diferentes.length; j++){
+    if (string.charAt(i) == diferentes.charAt(j)){
+      b=1}
 }
-
+if (b==0){diferentes=diferentes +string.charAt(i)}
+}
+object1={}
+for (j=0;j<diferentes.length; j++){
+  count=0
+  
+  for (i=0;i<string.length; i++){
+    if (diferentes.charAt(j)==string.charAt(i)){
+      count=count+1
+    }}
+    object1[diferentes.charAt(j)]= count 
+}
+return object1
+}
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+var stringOrdenadaMayuscula=''
+var stringOrdenadaMinuscula=''
+var devolver=''
+for (i=0; i< s.length; i++){
+  if(s.charAt(i).toUpperCase() == s.charAt(i)){
+    stringOrdenadaMayuscula = stringOrdenadaMayuscula + s.charAt(i)
+  }
+  else{
+    stringOrdenadaMinuscula=stringOrdenadaMinuscula + s.charAt(i)
+  }
+ 
 }
-
+return stringOrdenadaMayuscula + stringOrdenadaMinuscula
+}
 
 function asAmirror(str) {
   //La función recibe una frase. 
